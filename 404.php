@@ -1,18 +1,66 @@
 <!-- <div class="content-left-wrap col-md-12"> -->
+<meta name="viewport" content="width=device-width, initial-scale=1">s
 <style>
 /*	@media (max-width: 1500px) and (min-width: 800px) {
   @viewport {
     width: 1000px;
   }
 }*/
+
+/*@media screen and (min-width: 1400px){
+	div.largeScreen {
+	width: 500px;
+	height:140px;
+}*/
+
 div.largeScreen {
-	width:550px;
+	width:90%;
 	height:140px;
 }
 
+h2{
+		font-weight: 30px;
+}
+p{
+		font-weight: 20px;
+}
+
+@media screen and (min-width: 300px){
+	div.largeScreen {
+	width:90%;
+	height:140px;
+	}
+	h2{
+		font-weight: 40px;
+	}
+	p{
+		font-weight: 25px;
+	}
+
+}
+
+
+
+@media screen and (min-width: 600px){
+	div.largeScreen {
+	width:500px;
+	height:120px;
+	}
+	h2{
+		font-weight: 40px;
+	}
+	p{
+		font-weight: 25px;
+		}
+}
+
+
+
+
+
 div.smallScreen {
-	width:1800px;
-	height:500px;
+	width:500px;
+	height:120px;
 }
 
 
@@ -23,15 +71,15 @@ div.smallScreen {
 
 		<!-- <main id="main" class="site-main" role="main"> -->
 
-			<div id="label" class="largeScreen" style="position:absolute;z-index:2;background-color:#99ADB8;top:0px;left:0px">
+			<div id="label" class="largeScreen" style="position:absolute;z-index:2;background-color:#99ADB8;top:0px;left:0px;padding:20px">
 
 				<header class="entry-header" >
 
-					<h2 class="entry-title" style="margin-left:190px;margin-right:150px"><?php _e( "404 Error!", 'zerif-lite' ); ?></h2>
+					<h2 style="margin-left:auto;margin-right:auto;margin-top:-10px"><?php _e( "404 Error!", 'zerif-lite' ); ?></h2>
 
 				</header><!-- .entry-header -->
 
-				<div class="entry-content" style="margin-left:20px;margin-right:20px;margin-bottom:20px">
+				<div style="margin-left:auto;margin-right:auto;margin-bottom:20px">
 
 
 
@@ -54,15 +102,17 @@ div.smallScreen {
 <script>
 	var labelBox = document.querySelector("#label");
 	var classes = labelBox.classList;
-	var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+	var w = Math.max(document.documentElement.clientWidth);
+	//var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 	var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 	console.log("w = ",w)
+	console.log("h = ",h)
 	console.log("classes = ",classes)
 
-	if(w < 800){
-		classes.remove("largeScreen");
-		classes.add("smallScreen");
-	}
+	// if(w < 800){
+	// 	classes.remove("largeScreen");
+	// 	classes.add("smallScreen");
+	// }
 	
 	
 </script>
