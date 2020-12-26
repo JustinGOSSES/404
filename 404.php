@@ -110,6 +110,7 @@ div.smallScreen {
 	  var height= Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
 	  output.style.height = height
 	  output.style.width = width
+	  console.log("height = ",height," width = ",width)
 	}
 
 	// var labelBox = document.querySelector("#label");
