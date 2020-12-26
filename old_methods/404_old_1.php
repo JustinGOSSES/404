@@ -1,5 +1,5 @@
 <!-- <div class="content-left-wrap col-md-12"> -->
-<meta name="viewport" content="width=device-width, height=device-height">s
+<meta name="viewport" content="width=device-width, height=device-height">
 <style>
 /*	@media (max-width: 1500px) and (min-width: 800px) {
   @viewport {
@@ -15,29 +15,25 @@
 
 div.largeScreen {
 	width:90%;
-	height:160px;
+	height:140px;
 }
 
 h2{
-		font-family: Arial, sans-serif;
 		font-weight: 30px;
 }
 p{
-		font-family: Arial, sans-serif;
 		font-weight: 20px;
 }
 
 @media screen and (min-width: 300px){
 	div.largeScreen {
 	width:90%;
-	height:160px;
+	height:140px;
 	}
 	h2{
-		font-family: Arial, sans-serif;
 		font-weight: 40px;
 	}
 	p{
-		font-family: Arial, sans-serif;
 		font-weight: 25px;
 	}
 
@@ -47,15 +43,13 @@ p{
 
 @media screen and (min-width: 600px){
 	div.largeScreen {
-	width:600px;
+	width:500px;
 	height:120px;
 	}
 	h2{
-		font-family: Arial, sans-serif;
 		font-weight: 40px;
 	}
 	p{
-		font-family: Arial, sans-serif;
 		font-weight: 25px;
 		}
 }
@@ -65,7 +59,7 @@ p{
 
 
 div.smallScreen {
-	width:600px;
+	width:500px;
 	height:120px;
 }
 
@@ -87,16 +81,14 @@ div.smallScreen {
 
 				<div style="margin-left:auto;margin-right:auto;margin-bottom:20px">
 
-					<h2>404 Page!</h2>
-					<!-- <p>Not where you expected to be? Maybe go <a href="https://justingosses.com/">home</a></p> -->
-					<!-- <p><?php _e( "That link didn't go anywhere and now you're on some sort of abandoned industrial island. Wander around and feel appropriately lost or click to go  ", 'zerif-lite' ); ?><a href="/"><?php _e( 'home', 'zerif-lite' ); ?></a></p> -->
-					<p>That link didn't go anywhere and now you're lost on some sort of abandoned industrial island.</p>
-					<p>Wander around and feel appropriately lost or go to <a href="https://justingosses.com">justingosses.com homepage</a></p>
+
+
+					<p><?php _e( "That link didn't go anywhere and now you're on some sort of abandoned industrial island. Wander around and feel appropriately lost or click to go  ", 'zerif-lite' ); ?><a href="/"><?php _e( 'home', 'zerif-lite' ); ?></a></p>
 
 
 				</div><!-- .entry-content -->
 			</div><!-- #post-## -->
-			<div id="output" style="position:absolute;left:-5px;top:-5px;z-index:1">
+			<div style="position:absolute;left:-5px;top:-5px;z-index:1">
 				<iframe id="streetview" src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2sus!4v1487820746671!6m8!1m7!1sA3tTI4JZsf22r2rcUZch3w!2m2!1d32.62712480678462!2d129.7386352339616!3f41.1332668802539!4f-3.7115668392063412!5f0.7820865974627469" width="1500" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe><!-- iframe -->
 			</div>
 			
@@ -109,20 +101,7 @@ div.smallScreen {
 
 <script>
 
-
-	
-function showViewport() {
-	  var output=document.getElementById("output");
-	  var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-	  var height= Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
-	  output.style.height = height
-	  output.style.width = width
-	}
-
-	window.onload = showViewport();
-	window.onresize = showViewport();
-
-	// window.onload = showViewport;
+    // window.onload = showViewport;
 	// window.onresize = showViewport;
 
 	// function showViewport() {
@@ -131,13 +110,22 @@ function showViewport() {
 	//   var height= Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
 	//   output.style.height = height
 	//   output.style.width = width
+	//   console.log("height = ",height," width = ",width)
 	// }
 
+	function showViewport() {
+	  var output=document.getElementById("output");
+	  var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+	  var height= Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+	  output.style.height = height
+	  output.style.width = width
+	}
+
+	window.onload = showViewport();
 
 	// var labelBox = document.querySelector("#label");
 	// var classes = labelBox.classList;
 	// var w = Math.max(document.documentElement.clientWidth);
-	// //var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 	// var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 	// console.log("w = ",w)
 	// console.log("h = ",h)
